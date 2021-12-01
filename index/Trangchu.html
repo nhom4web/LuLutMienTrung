@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Trang chủ</title>
+	<link rel="stylesheet" type="text/css" href="../css/Trangchu.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,500;0,600;1,100;1,200;1,300;1,400;1,500&family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+</head>
+<body>
+	<div id="header">
+		<div class="header_left"><a href="Trangchu.html">NHÓM 4</a></div>
+		<div class="header_menu">
+			<ul>
+				<li><a href="Trangchu.html">Trang chủ</a></li>
+				<li><a href="Tintuc.html">Tin tức</a>
+					<!-- <ul class="menu2">
+						<li><a href="">Danh mục tin tức</a></li>
+						<li><a href="">Tin tức nóng trong ngày</a></li>
+						<li><a href="">Hoạt động từ thiện</a></li>
+					</ul> -->
+				</li>
+				<li><a href="Baotri.html">Tình nguyện viên</a></li>
+				<li><a href="Gioithieu.html">Liên hệ</a></li>
+				<li><a href="Baotri.html">Đóng góp</a></li>
+				<li><a href="Login.html">Đăng nhập</a></li>
+			</ul>
+		</div>
+		<div class="header_right">
+			<form action="" method="" style="margin-top: 6px;">
+			<input type="text" name="" placeholder="Tìm kiếm...">
+			<input type="submit" name="" value="&nbsp;"> 
+			<!-- <a href="" class="ic"><i class="fas fa-search"></i></a>ICON TÌM KIẾM -->
+		    </form>
+		</div>
+	</div>
+<!-- /////////////////////////////////////////////////////////////////////////////// -->
+    <div id="space1" style="height: 900px;">
+    	<div id="slider">
+    		<div class="slider-item" number="0">
+    			<a href=""><img src="../img/banner1_2.png"></a>
+    			<p>Nhóm 4 <br> Lũ Lụt Miền Trung</p>
+    		</div>
+    		<div class="slider-item" number="1" style="display: none;"><a href=""><img src="../img/banner3.png"></a></div>
+    		<div class="slider-item" number="2" style="display: none;"><a href=""><img src="../img/banner2.png"></a></div>
+    		<a href="#" class="next"><i class="fas fa-chevron-right"></i></a>
+		    <a href="#" class="prev"><i class="fas fa-chevron-left"></i></a>
+    	</div>
+    </div>
+    <!-- SCRIPT CHUYỂN ẢNH -->
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
+	<script>
+		$(() => {
+			$('.next').click(function(){
+				changeImage('next');
+			})
+			$('.prev').click(function(){
+				changeImage('prev');
+			})
+		})
+            function changeImage(type){
+                        let imgSelectVisible = $('div.slider-item:visible');
+                            let imgVisible= parseInt(imgSelectVisible.attr('number'));
+                            let eqNumber=0;
+                            if(type=='next'){
+                                 eqNumber = imgVisible+1;
+                                 if(eqNumber>=$('div.slider-item').length)
+                                 eqNumber=0;
+                            }
+                            else{
+                                 eqNumber = imgVisible-1;
+                            }
+                            $('div.slider-item').eq(eqNumber).fadeIn();
+                            imgSelectVisible.fadeOut();
+                    }
+	</script>
+<!-- /////////////////////////////////////////////////////////////////////////////// -->
+    <div id="title">
+    	<h2>CHƯƠNG TRÌNH HÀNH ĐỘNG</h2>
+    	<p>Ba chương trình hành động của Quỹ bao gồm: chương trình River Ơi, Nhà Chống Lũ, Hạnh Phúc Xanh, tương ứng với các mục tiêu "Con người bền vững - Cộng đồng bền vững - Môi trường bền vững".</p>
+    </div>
+<!-- /////////////////////////////////////////////////////////////////////////////// -->
+    <div id="content1-active">
+    	<div class="ct1">
+    		<a href="Chitiet.html">
+    		<img src="../img/ic11.png">
+    		<h4>CHƯƠNG TRÌNH HẠNH PHÚC XANH</h4>
+    		<p>Ra mắt năm 2018, Hạnh Phúc Xanh là chương trình thúc đẩy cộng đồng trồng cây nhằm tăng mật độ cây xanh; tăng sự kết nối giữa con người và tự nhiên và giữa con người với con người, từ đó được bảo vệ và sống hạnh phúc hơn.</p></a>
+    	</div>
+    	<div class="ct1">
+    		<a href="">
+    		<img src="../img/ic12.png">
+    		<h4>CHƯƠNG TRÌNH NHÀ CHỐNG LŨ</h4>
+    		<p>Khởi xướng năm 2013, Nhà Chống Lũ là dự án phát triển cộng đồng với mục đích xây nhà an toàn và phát triển sinh kế bền vững cho người dân nghèo tại các vùng chịu ảnh hưởng bởi thiên tai và biến đổi khí hậu.</p></a>
+    	</div>
+    	<div class="ct1">
+    		<a href="">
+    		<img src="../img/ic13.png">
+    		<h4>CHƯƠNG TRÌNH RIVER ƠI</h4>
+    		<p>Chương trình River Ơi lấy trọng tâm là các dự án nâng cao năng lực, thúc đẩy đầu tư cho đề tài nghiên cứu về phát triển bền vững, đưa nghệ thuật vào các hoạt động cộng đồng để mở rộng đối thoại, truyền thông về các góc nhìn mới, từ đó đề xuất những sáng kiến tới chính quyền và cộng đồng.</p></a>
+    	</div>
+    </div>
+<!-- /////////////////////////////////////////////////////////////////////////////// -->
+<!-- /////////////////////////////////////////////////////////////////////////////// -->
+    <div id="title" style="margin-top: 0px;">
+    	<h2>CHIẾN DỊCH GÂY QUỸ</h2>
+    	<p>Quỹ Sống vận động và báo cáo sử dụng nguồn quỹ một cách minh bạch, tiết kiệm và khoa học; với sự tham gia của các tập đoàn đa quốc gia và địa phương, các tổ chức phi chính phủ, các doanh nghiệp vừa và nhỏ, rất nhiều cá nhân hảo tâm... Hãy cùng tham gia các chiến dịch của chúng tôi vì một tương lai bền vững hơn cho các thế hệ sau!</p>
+    </div>
+<!-- /////////////////////////////////////////////////////////////////////////////// -->
+    <div id="bannerspace">
+    <img src="../img/bannerspace2.png">
+    </div>
+<!-- /////////////////////////////////////////////////////////////////////////////// -->
+    <div id="title" style="margin-top: 70px;">
+    	<h2>TIN TỨC & SỰ KIỆN</h2>
+    	<p>Tin tức | Sự kiện | Thông cáo Báo chí | Tài liệu | Báo cáo Tài trợ</p>
+    </div>
+<!-- /////////////////////////////////////////////////////////////////////////////// -->
+<div id="content1">
+    	<div class="ct1">
+    		<a href="Chitiet.html">
+    		<div class="frame">
+    		<img src="../img/ct1.jpg">
+    		</div>
+    		<h4>Lũ bất ngờ ập vào trường học, phải giải cứu học sinh</h4>
+    		<p>Hàng trăm học sinh ở Quảng Trị đã được lực lượng chức năng cùng phụ huynh đưa đến nơi an toàn, sau khi trường học bất ngờ bị nước lũ bao vây.</p></a>
+    	</div>
+    	<div class="ct1">
+    		<a href="">
+    		<div class="frame" style="margin-left: 25px;">
+    		<img src="../img/ct2.jpg">
+    		</div>
+    		<h4>Xuất hiện vùng áp thấp trên Biển Đông, miền Trung hứng mưa đặc biệt lớn</h4>
+    		<p>Nhiều nơi ở miền Trung đang hứng mưa rất to gây ngập lụt, chia cắt nhiều nơi. Trong khi đó, trên Biển Đông xuất hiện một vùng áp thấp khả năng sẽ tiếp tục gây mưa cho miền Trung những ngày tới.</p></a>
+    	</div>
+    	<div class="ct1">
+    		<a href="">
+    		<div class="frame">
+    		<img src="../img/ct3.jpg">
+    		</div>
+    		<h4>Nhiều tuyến đường ở Quảng Nam ngập sâu, giao thông chia cắt</h4>
+    		<p>Mưa lớn cùng với việc hồ Phú Ninh và các thuỷ điện xả nước khiến nhiều khu vực, tuyến đường trên địa bàn TP Tam Kỳ (Quảng Nam) ngập sâu.</p></a>
+    	</div>
+    	<div class="ct1">
+    		<a href="">
+    		<div class="frame">
+    		<img src="../img/ct4.jpg">
+    		</div>
+    		<h4>CSGT Quảng Nam "giải cứu" hàng chục người kẹt giữa dòng nước lũ</h4>
+    		<p>Sáng 24-10, trung tá Trần Minh Hiếu, Đội trưởng Đội CSGT số 1 - Phòng CSGT Đường bộ, đường sắt Công an tỉnh Quảng Nam, cho biết vừa phối hợp với lực lượng chức năng đã giải cứu hàng chục người dân bị mắc kẹt trong dòng nước lũ.</p></a>
+    	</div>
+    	<div class="ct1">
+    		<a href="">
+    		<div class="frame">
+    		<img src="../img/ct5.jpg">
+    		</div>
+    		<h4>Mưa lớn tới hơn 700 mm, nhiều tỉnh miền Trung, Tây Nguyên ngập nặng, lũ lớn</h4>
+    		<p>Mưa lớn liên tục những ngày qua đã gây ngập lụt nhiều nơi ở miền Trung, Tây Nguyên. Cảnh báo nguy cơ xảy ra lũ quét, sạt lở đất và ngập úng từ Hà Tĩnh đến Khánh Hòa và khu vực Tây Nguyên.</p></a>
+    	</div>
+    	<div class="ct1">
+    		<a href="">
+    		<div class="frame">
+    		<img src="../img/ct6.jpg">
+    		</div>
+    		<h4>Đo được lượng mưa lớn nhất trong 25 năm qua ở rốn lũ Nghệ An</h4>
+    		<p>Lượng mưa đo được lên tới 582mm, được xem là đợt mưa lớn nhất trong 25 năm qua ở huyện Quỳnh Lưu (Nghệ An) đã khiến hàng ngàn hộ dân bị ngập nước, hàng trăm ha diện tích nuôi tôm, cá bị nhấn chìm...</p></a>
+    	</div>
+    	<div class="ct1">
+    		<a href="">
+    		<div class="frame">
+    		<img src="../img/ct7.jpg">
+    		</div>
+    		<h4>Nghệ sĩ làm thiện nguyện và chuyện sao kê: Nên thận trọng để tránh có rắc rối</h4>
+    		<p>Hai tuần qua, một nữ YouTuber liên tục gọi tên nhiều nghệ sĩ trên mạng xã hội, làm rộ lên tin đồn họ "ăn chặn" từ hàng chục đến hàng trăm tỉ đồng tiền từ thiện cho đợt lũ lụt miền Trung năm 2020.</p></a>
+    	</div>
+    	<div class="ct1">
+    		<a href="">
+    		<div class="frame">
+    		<img src="../img/ct8.jpg">
+    		</div>
+    		<h4>'Tháng yêu thương' của học trò trao gửi đến miền Trung</h4>
+    		<p>Mang khoản tiền gần 23 triệu đồng do các bạn học sinh đóng góp trao cho báo Tuổi Trẻ, cô Thu Hiến - đại diện hơn 230 học trò hệ thống Trường Khai Nguyên (TP.HCM) - cũng mang đến một câu chuyện ấm áp.</p></a>
+    	</div>
+    	<div class="ct1">
+    		<a href="">
+    		<div class="frame">
+    		<img src="../img/ct9.jpg">
+    		</div>
+    		<h4>'May mà còn sống sau lũ quét, còn người thì còn của thôi'</h4>
+    		<p>Sau trận lũ quét kinh hoàng giữa đêm, từ đầu đến cuối xã Hướng Sơn (huyện Hướng Hóa, tỉnh Quảng Trị) xơ xác, ngổn ngang bùn đá, cây rừng...</p></a>
+    	</div>
+    </div>
+<!-- /////////////////////////////////////////////////////////////////////////////// -->
+<!--  <div id="spacex" style=" height: auto;min-height: 700px;"></div> -->
+<!-- /////////////////////////////////////////////////////////////////////////////// -->
+<div id="footer">
+	<ul>
+		<li><a href="">Trang chủ</a></li>
+		<li><a href="">Tin tức</a></li>
+		<li><a href="">Quỹ sống</a></li>
+		<li><a href="">Quảng cáo</a></li>
+		<li><a href="">Đóng góp</a></li>
+		<li><a href="">Liên hệ</a></li>
+	</ul>
+	<p>NHÓM 4: TRẦN MẠNH CƯỜNG - NGUYỄN THỊ LINH - DƯƠNG DUY LAM - HÀ HẢI ANH</p>
+</div>
+</body>
+</html>
